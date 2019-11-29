@@ -14,14 +14,7 @@ df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv')
 available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
-html.Div(style={'backgroundColor': colors['background']}, children=[
-    html.H1(
-        children='Soy Maya y soy mi propia heroina :-)',
-        style={
-            'textAlign': 'center',
-            'color': colors['text']
-        }
-    ),
+
     html.Div([
 
         html.Div([
