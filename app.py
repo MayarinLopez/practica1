@@ -9,12 +9,20 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
+colors = {
+    'background': '#111111',
+    'text': '#ff3fff'
+}
 df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv')
 
 available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
-html.H1(children='Hello Dash'),
+html.H1(children='Soy Maya y soy mi propia herua jajaja (heroína)',
+        style={
+            'textAlign': 'center',
+            'color': colors['text']
+        }),
 
     html.Div(children='''
         Dash: A web application framework for Python.
