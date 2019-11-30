@@ -14,7 +14,11 @@ df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv')
 available_indicators = df['Indicator Name'].unique()
 
 app.layout = html.Div([
+html.H1(children='Hello Dash'),
 
+    html.Div(children='''
+        Dash: A web application framework for Python.
+    '''),
     html.Div([
 
         html.Div([
